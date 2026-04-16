@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alege ziua</title>
+  <meta name="theme-color" content="#e9a9bf">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="video-page calendar-page page-enter">
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/fundal.mp4" type="video/mp4">
+    Browserul tău nu suportă video HTML5.
+  </video>
+
+  <div class="overlay-dark soft-pink"></div>
+  <div class="floating-glow glow-1"></div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/ambient-intro.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="calendar-wrapper tiny-calendar-wrapper">
+    <section class="calendar-card glass-on-video tiny-calendar-card">
+      <div class="calendar-top-row">
+        <div>
+          <p class="section-label">📅 Un mic moment pentru tine</p>
+          <h1>Alege ziua.</h1>
+        </div>
+
+        <button class="secondary-button sound-inline-button" id="soundToggleBtn" type="button" onclick="toggleAudio()">
+          🔇 Melodia este oprită
+        </button>
+      </div>
+
+      <p class="calendar-text compact-text">
+        Există zile care trec... Și există zile care fac luna mai frumoasă.
+      </p>
+
+      <div class="fun-hint-box premium-hint">
+        <p class="fun-hint-title">✨ Un simplu indiciu foarte discret</p>
+        <p class="fun-hint-text">
+          Nu vreau să stric surpriza... dar dacă un număr ar zâmbi în calendar, acela ar fi <strong>17</strong>.
+        </p>
+      </div>
+
+      <div class="calendar-box tiny-calendar-box">
+        <div class="calendar-header tiny-calendar-header">
+          <button class="nav-btn" id="prevMonthBtn" type="button" aria-label="Luna precedentă">‹</button>
+
+          <div>
+            <h2 id="monthTitle">Aprilie 2026</h2>
+            <p class="calendar-subtitle">🌸 Apasă pe ziua specială</p>
+          </div>
+
+          <button class="nav-btn" id="nextMonthBtn" type="button" aria-label="Luna următoare">›</button>
+        </div>
+
+        <div class="weekdays tiny-weekdays">
+          <div>Lu</div>
+          <div>Ma</div>
+          <div>Mi</div>
+          <div>Jo</div>
+          <div>Vi</div>
+          <div>Sâ</div>
+          <div>Du</div>
+        </div>
+
+        <div id="calendarDays" class="calendar-days tiny-calendar-days"></div>
+      </div>
+
+      <div id="calendarMessage" class="calendar-message"></div>
+
+      <div class="bottom-actions">
+        <button class="secondary-button" onclick="goToPage('index.html', false)">
+          Înapoi
+        </button>
+
+        <button class="main-button hidden" id="continueBtn" onclick="goToPage('mesaje.html', true, true)">
+          Mergem mai departe
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

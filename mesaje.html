@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Întrebări și gânduri</title>
+  <meta name="theme-color" content="#b9899f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="story-video-page page-enter">
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/story.mp4" type="video/mp4">
+    Browserul tău nu suportă video HTML5.
+  </video>
+
+  <div class="overlay-dark story-overlay"></div>
+  <div class="floating-glow glow-2"></div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/ambient-story.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="sound-toggle sound-toggle-strong" id="soundToggleBtn" type="button" onclick="toggleAudio()">
+    🔇 Melodia este oprită
+  </button>
+
+  <div class="sound-hint calendar-sound-hint">
+    De aici atmosfera se schimbă puțin, mai cald și mai personal ✨
+  </div>
+
+  <main class="messages-wrapper">
+    <section class="messages-card glass-on-video premium-story-card">
+      <p class="section-label">Mai întâi, câteva alegeri drăguțe</p>
+      <h1>Câteva lucruri simple, doar pentru tine.</h1>
+      <p class="calendar-text light-text">
+        Alege ce ți se potrivește mai mult. După fiecare răspuns apare un mic gând, iar apoi mergem mai departe.
+      </p>
+
+      <div id="questionsSection" class="questions-section">
+        <div class="question-card">
+          <h3>1. Ce crezi că face un suflet frumos cu adevărat?</h3>
+          <div class="answer-buttons">
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(1, this, 'zi-linistita')">Bunătatea</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(1, this, 'zi-vesela')">Curăția inimii</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(1, this, 'zi-surprize')">Felul în care îi face pe ceilalți să se simtă</button>
+          </div>
+          <div class="answer-feedback" id="feedback1"></div>
+        </div>
+
+        <div class="question-card">
+          <h3>2. În ce fel de momente simți cel mai mult liniște?</h3>
+          <div class="answer-buttons">
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(2, this, 'flori')">Când totul e simplu</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(2, this, 'momente')">Când sunt oamenii dragi aproape</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(2, this, 'mesaje')">Când simți pace în inimă</button>
+          </div>
+          <div class="answer-feedback" id="feedback2"></div>
+        </div>
+
+        <div class="question-card">
+          <h3>3. Ce ți-ai dori să nu-ți lipsească niciodată din viață?</h3>
+          <div class="answer-buttons">
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(3, this, 'zambet')">Credința</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(3, this, 'simtire')">Oamenii sinceri</button>
+            <button type="button" class="answer-btn" onclick="raspundeLaIntrebare(3, this, 'amintire')">Bucuria care vine din lucrurile simple</button>
+          </div>
+          <div class="answer-feedback" id="feedback3"></div>
+        </div>
+      </div>
+
+      <div id="questionsDoneMessage" class="calendar-message hidden">
+        <div class="message-success">
+          Ok. Mergem puțin mai departe 🌷
+        </div>
+      </div>
+
+      <div id="messagesSection" class="hidden">
+        <div class="messages-intro-box">
+          <p>
+            Și acum, câteva lucruri pe care am vrut să le las aici într-un mod simplu, cald și sincer.
+          </p>
+        </div>
+
+        <div class="message-grid">
+          <button class="message-item" type="button" onclick="toggleMessageCard(this)">
+            <span class="message-front">Un gând sincer</span>
+            <span class="message-back">
+              Sunt foarte frumoși oamenii care nu au nevoie de prea multe ca să lase ceva frumos în mintea și în sufletul altcuiva.
+            </span>
+          </button>
+
+          <button class="message-item" type="button" onclick="toggleMessageCard(this)">
+            <span class="message-front">Un gând cald</span>
+            <span class="message-back">
+              Ști, Tu ai felul acela rar de a transmite liniște, delicatețe și o frumusețe care nu se explică ușor, dar se simte.
+            </span>
+          </button>
+
+          <button class="message-item" type="button" onclick="toggleMessageCard(this)">
+            <span class="message-front">Aici puțin diferit, dar rămâne</span>
+            <span class="message-back">
+              Astăzi n-am vrut doar să spun ceva frumos până aici, ci să las un mic loc care să-ți amintească faptul că ești apreciată mult.
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bottom-actions">
+        <button class="secondary-button" onclick="goToPage('calendar.html', false)">
+          Înapoi la calendar
+        </button>
+
+        <button class="main-button hidden" id="continueToFlowersBtn" onclick="goToPage('flori.html', true, true)">
+          Mai departe
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

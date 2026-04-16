@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pentru Mira</title>
+  <meta name="theme-color" content="#e9a9bf">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="video-page intro-page page-enter">
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/fundal.mp4" type="video/mp4">
+    Browserul tău nu suportă video HTML5.
+  </video>
+
+  <div class="overlay-dark intro-overlay"></div>
+  <div class="floating-glow glow-1"></div>
+  <div class="floating-glow glow-2"></div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/ambient-intro.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="hero">
+    <section class="hero-box intro-hero-box">
+      <p class="small-text">Pentru o zi liniștită și frumoasă</p>
+      <h1>Astăzi nu este doar o zi obișnuită.</h1>
+      <p class="subtitle">
+        Unele zile trec. Altele rămân.<br>
+        Iar aceasta merită un loc al ei.
+      </p>
+
+      <div class="journey-note">
+        <span>✈️</span>
+        <p>Drum frumos prin ceea ce urmează. Sper să-ți aducă un zâmbet și o stare bună.</p>
+      </div>
+
+      <div class="hero-actions-inline">
+        <button class="main-button" onclick="intraInPoveste()">
+          Intră
+        </button>
+
+        <button class="secondary-button sound-inline-button pulse-sound" id="soundToggleBtn" type="button" onclick="toggleAudio()">
+          🔇 Pornește melodia
+        </button>
+      </div>
+
+      <p class="inline-sound-hint">
+        Mai întâi pornește melodia și după mergem mai departe! ✨
+      </p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

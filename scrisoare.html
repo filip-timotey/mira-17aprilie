@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrisoare pentru Mira</title>
+  <meta name="theme-color" content="#b9899f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="story-video-page letter-page page-enter refined-letter-page">
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/story.mp4" type="video/mp4">
+    Browserul tău nu suportă video HTML5.
+  </video>
+
+  <div class="overlay-dark story-overlay"></div>
+  <div class="floating-glow glow-2"></div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/ambient-story.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="birthdaySong" preload="auto">
+    <source src="assets/audio/happy-birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="sound-toggle sound-toggle-strong" id="soundToggleBtn" type="button" onclick="toggleAudio()">
+    🔇 Melodia este oprită
+  </button>
+
+  <main class="letter-wrapper refined-letter-wrapper">
+    <section class="letter-paper glass-on-video refined-letter-paper">
+      <p class="section-label">💌 Ultima parte</p>
+      <h1>Un scurt gând pentru tine, Mira</h1>
+
+      <p class="letter-intro-note">
+        Pentru o zi liniștită și frumoasă!<br>
+        Doar citește, aici nu trebuie să faci nimic. La final, te așteaptă un mic moment special.
+      </p>
+
+      <div class="letter-scroll-shell">
+        <div id="letterScrollContainer" class="letter-scroll-container">
+          <div id="typewriterText" class="typewriter-letter"></div>
+        </div>
+      </div>
+
+      <div id="birthdayMoment" class="birthday-moment hidden">
+        <div class="birthday-divider"></div>
+
+        <div id="birthdayLyrics" class="birthday-lyrics">
+          <h2>Happy Birthday🎉</h2>
+          <p>Happy birthday to you🎈</p>
+          <p>Happy birthday to you🎈</p>
+          <p>Happy birthday, dear Mira🎉</p>
+          <p>Happy birthday to you🎊</p>
+        </div>
+      </div>
+
+      <div class="bottom-actions">
+        <button class="secondary-button" onclick="goToPage('flori.html', false)">
+          Înapoi
+        </button>
+
+        <button class="main-button" onclick="goToPage('final.html', true, true)">
+          Încă puțin
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

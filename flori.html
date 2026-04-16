@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flori și semnificații</title>
+  <meta name="theme-color" content="#b9899f">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="story-video-page page-enter">
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/story.mp4" type="video/mp4">
+    Browserul tău nu suportă video HTML5.
+  </video>
+
+  <div class="overlay-dark story-overlay"></div>
+  <div class="floating-glow glow-1"></div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/ambient-story.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="sound-toggle sound-toggle-strong" id="soundToggleBtn" type="button" onclick="toggleAudio()">
+    🔇 Melodia este oprită
+  </button>
+
+  <main class="flowers-wrapper">
+    <section class="flowers-card glass-on-video">
+      <p class="section-label">🌷 Unele flori spun lucruri pe care cuvintele le spun prea greu.</p>
+      <h1>Un suflet poate fi văzut și în culori!</h1>
+      <p class="calendar-text light-text">
+        Deschide orice floare ca să o vezi mai mare și să vezi gândul ei într-un mod mai frumos.<br>
+        🙏🙂"Poate nu am găsit toate florile exact așa cum sunt aici...<br>
+        dar cred că, privit altfel, păstrează același gând." ...în curând ✈️...
+      
+      </p>
+
+      <div class="flowers-grid">
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare1.jpg', 'Margaretă', 'Simbol al unei frumuseți simple și curate, care nu caută să impresioneze, dar rămâne în suflet prin naturalețea ei.')">
+          <img src="assets/images/floare1.jpg" alt="Bujor">
+          <div class="flower-content">
+            <h3>Margaretă</h3>
+            <p>Frumusețe sinceră și simplitate naturală.</p>
+          </div>
+        </article>
+
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare2.jpg', 'Lavandă', 'Simbol al liniștii și al unei prezențe care aduce pace, chiar și fără cuvinte.')">
+          <img src="assets/images/floare2.jpg" alt="Lalea albă">
+          <div class="flower-content">
+            <h3>Lavandă</h3>
+            <p>Liniște și pace.</p>
+          </div>
+        </article>
+
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare3.jpg', 'Floarea-soarelui', 'Simbol al luminii și al acelei călduri care se simte în jurul unui om fără să fie cerută.')">
+          <img src="assets/images/floare3.jpg" alt="Trandafir roz">
+          <div class="flower-content">
+            <h3>Floarea-soarelui</h3>
+            <p>Lumină și căldură.</p>
+          </div>
+        </article>
+
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare4.jpg', 'Trandafir roz', 'Simbol al gingășiei și al unei frumuseți delicate, care se face simțită în cele mai mici gesturi.')">
+          <img src="assets/images/floare4.jpg" alt="Hortensie">
+          <div class="flower-content">
+            <h3>Trandafir roz</h3>
+            <p>Gingășie, respect și frumusețe delicată.</p>
+          </div>
+        </article>
+
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare5.jpg', 'Bujor', 'Simbol al unei frumuseți profunde și al unei sensibilități care nu se vede din prima, dar rămâne.')">
+          <img src="assets/images/floare5.jpg" alt="Floarea-soarelui">
+          <div class="flower-content">
+            <h3>Bujor</h3>
+            <p>Feminitate, eleganță, profunzime.</p>
+          </div>
+        </article>
+
+        <article class="flower-item premium-flower" onclick="openFlowerModal('assets/images/floare6.jpg', 'Lalea albă', 'Simbol al sincerității și al unei simplități curate, care nu are nevoie de explicații ca să fie înțeleasă.')">
+          <img src="assets/images/floare6.jpg" alt="Lavandă">
+          <div class="flower-content">
+            <h3>Lalea albă</h3>
+            <p>Sinceritate, curăție, simplitate frumoasă.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="bottom-actions">
+        <button class="secondary-button" onclick="goToPage('mesaje.html', false)">
+          Înapoi
+        </button>
+
+        <button class="main-button" onclick="goToPage('scrisoare.html', true, true)">
+          Continuă
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div id="flowerModal" class="flower-modal hidden" onclick="closeFlowerModal()">
+    <div class="flower-modal-content" onclick="event.stopPropagation()">
+      <button class="flower-close" onclick="closeFlowerModal()">×</button>
+      <img id="flowerModalImage" src="" alt="Floare mărită">
+      <div class="flower-modal-overlay">
+        <h3 id="flowerModalTitle"></h3>
+        <p id="flowerModalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
